@@ -12,6 +12,6 @@
 	border-radius: 4px;
 }
 
-.item:focus{
+.item_focus{
   border: 1px solid var(--colors-interface-error);
 }

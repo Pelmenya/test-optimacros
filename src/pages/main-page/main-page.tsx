@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import cn from 'classnames';
 import { Title } from '../../components/title/title';
 
@@ -17,7 +17,7 @@ export const MainPage = () => {
 
   return (
     <main className={mainPage.main}>
-      <Title type={'h1'} className={cn('pt-10', mainPage.title)}>
+      <Title type={'h1'} className={cn('pt-10 pb-5', mainPage.title)}>
         List of pages
       </Title>
       <DndProvider backend={HTML5Backend}>

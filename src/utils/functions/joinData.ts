@@ -4,7 +4,7 @@ export function joinData (data:any) {
 			dataArr.push({
 				id: data.entityLongIds[index],
 				label: data.labels[index],
-				parent: item,
+				parentId: item,
 			});
 	});
 	return [

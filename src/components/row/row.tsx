@@ -1,12 +1,14 @@
 import cn from 'classnames';
 import { useCallback } from 'react';
-import { useDispatch } from 'react-redux';
-import { resetCurrentPage, setCurrentPage } from '../../services/redux/slices/current-page';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCurrentPageState } from '../../services/redux/selectors/current-ingredient';
+import { setCurrentPage } from '../../services/redux/slices/current-page';
 
 import row from './row.module.css';
 
 export const Row = ({ item, level, children }: any) => {
   const dispatch = useDispatch();
+  const { page } = useSelector(getCurrentPageState);
 
   const handlerOnFocusPage = useCallback(
     () => {
@@ -18,15 +20,6 @@ export const Row = ({ item, level, children }: any) => {
     ],
   );
 
-  const handlerOnBlurPage = useCallback(
-    () => {
-      dispatch(resetCurrentPage());
-    },
-    [
-      dispatch,
-    ],
-  );
-
   return (
     <div
       key={`section-${item.id}`}
@@ -34,9 +27,8 @@ export const Row = ({ item, level, children }: any) => {
       className={cn(row.container, 'text text_type_main-default')}>
       <span
         tabIndex={0}
-        className={cn(row.item, 'pl-4')}
-        onFocus={handlerOnFocusPage}
-        onBlur={handlerOnBlurPage}>
+        className={cn(row.item, 'pl-4', page?.id === item.id && row.item_focus)}
+        onClick={handlerOnFocusPage}>
         {item.label}
       </span>
       <div>{children}</div>

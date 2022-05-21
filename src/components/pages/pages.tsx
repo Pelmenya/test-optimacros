@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import { useSelector } from 'react-redux';
 import { getPagesState } from '../../services/redux/selectors/pages';
 import { Tree } from '../tree/tree';
@@ -9,7 +8,7 @@ export const Pages = () => {
 
   return (
     <div className={pagesStyle.container}>
-      {pages && <Tree treeData={pages} parent={-1} level={0} />}
+      {pages && <Tree treeData={pages} parentId={-1} level={0} />}
     </div>
   );
 };
