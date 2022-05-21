@@ -1,6 +1,8 @@
 # test-optimacros
 Тестовое задание Оптимакрос
 
+«[Сайт проекта на Heroku](https://test-optimacros.herokuapp.com/)»
+
 # Задание 1
 
 - [ ] Развернуть create-react-app
