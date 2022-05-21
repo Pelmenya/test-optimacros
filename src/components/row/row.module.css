@@ -1,0 +1,11 @@
+.container {
+	width: 100%;
+}
+
+.item {
+  width: 50%;
+  border: 1px solid #fff;
+  margin-top: 4px;
+  margin-bottom: 4px;
+	display: block;
+}
