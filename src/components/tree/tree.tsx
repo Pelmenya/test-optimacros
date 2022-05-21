@@ -9,7 +9,7 @@ export const Tree = ({ treeData, parent = -1, level = 0 }: any) => {
     <>
       {items.map((item:any) => (
         <Row key={item.id} item={item} level={level}>
-          <Tree treeData={treeData} parent={item.id} level={level + 5} />
+          <Tree treeData={treeData} parent={item.id} level={level + 16} />
         </Row>
       ))}
     </>
