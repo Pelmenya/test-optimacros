@@ -3,8 +3,15 @@
 }
 
 .item {
-  border: 1px solid #fff;
+  border: 1px solid var(--text-primary-color);
   margin-top: 4px;
   margin-bottom: 4px;
 	display: block;
+	cursor:move;
+	background-color: var(--background-element);
+	border-radius: 4px;
+}
+
+.item:focus{
+  border: 1px solid var(--colors-interface-error);
 }

@@ -9,8 +9,8 @@ class PagesAPI {
   }
 
   getPages = async () => {
-    return fetch(`${this.server}`)
-      .then(checkResponse)
+    const res = await fetch(`${this.server}`);
+    return checkResponse(res);
   };
 }
 
